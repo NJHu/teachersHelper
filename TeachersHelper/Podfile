@@ -1,0 +1,46 @@
+def public_pods
+    source 'https://github.com/CocoaPods/Specs.git' # 公有源
+    
+    pod 'ZFPlayer', '~> 3.0'
+    #pod 'ZFPlayer/ControlView', '~> 3.0'
+    #pod 'ZFPlayer/AVPlayer', '~> 3.0'
+end
+
+def njspec_pods
+    # 发布
+    release_remote_pods
+    
+    # 开发
+    develop_local_pods
+end
+
+def develop_local_pods
+    source 'https://github.com/NJHu/NJSpecs.git' # NJ 私有源
+    
+    pod 'NJKit', :path => '../../NJKit'
+    pod 'NJMediator', :path => '../../NJMediator'
+end
+
+def release_remote_pods
+    
+    source 'https://github.com/NJHu/NJSpecs.git' # NJ 私有源
+    # 基础组件
+    #pod 'NJKit'
+    # 中间件
+    #pod 'NJMediator', :source => 'https://github.com/NJHu/NJSpecs.git'
+end
+
+platform :ios, '10.3'
+
+use_frameworks!
+
+target 'TeachersHelper' do
+    
+    inhibit_all_warnings!
+    
+    njspec_pods
+    
+    public_pods
+    
+end
+
