@@ -10,6 +10,10 @@ PODS:
     - SnapKit
     - SwiftyJSON
   - NJMediator (1.0.0)
+  - NJMediator_NJTeachersHelerList (1.0.0):
+    - NJMediator
+  - NJTeachersHelerList (1.0.0):
+    - NJKit
   - SnapKit (4.2.0)
   - SwiftyJSON (4.2.0)
   - ZFPlayer (3.2.1):
@@ -19,6 +23,8 @@ PODS:
 DEPENDENCIES:
   - NJKit (from `../../NJKit`)
   - NJMediator (from `../../NJMediator`)
+  - NJMediator_NJTeachersHelerList (from `../../NJMediator_NJTeachersHelerList`)
+  - NJTeachersHelerList (from `../../NJTeachersHelerList`)
   - ZFPlayer (~> 3.0)
 
 SPEC REPOS:
@@ -35,6 +41,10 @@ EXTERNAL SOURCES:
     :path: "../../NJKit"
   NJMediator:
     :path: "../../NJMediator"
+  NJMediator_NJTeachersHelerList:
+    :path: "../../NJMediator_NJTeachersHelerList"
+  NJTeachersHelerList:
+    :path: "../../NJTeachersHelerList"
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -42,10 +52,12 @@ SPEC CHECKSUMS:
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   NJKit: 980ee54e27f7c283c983f284c0a3e21d9a14bc86
   NJMediator: d9c32bd95fe1d3375a21b2102445d53b5232f062
+  NJMediator_NJTeachersHelerList: c5b840bf5adcf9f4ec8a0c2324a3910d7b999e48
+  NJTeachersHelerList: 3f5c424743f7bd01f684dd782c283a03bf3ca375
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   ZFPlayer: 00292c75ee52f5c2e4056c4fe911aa7697f5559f
 
-PODFILE CHECKSUM: 7f8f6e3a2dc96e6aab9cee620114913251af96da
+PODFILE CHECKSUM: f4971f0b2aae89075580485d7afa3cebbac7b4bd
 
 COCOAPODS: 1.5.3

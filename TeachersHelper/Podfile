@@ -19,6 +19,9 @@ def develop_local_pods
     
     pod 'NJKit', :path => '../../NJKit'
     pod 'NJMediator', :path => '../../NJMediator'
+    
+    pod 'NJTeachersHelerList', :path => '../../NJTeachersHelerList'
+    pod 'NJMediator_NJTeachersHelerList', :path => '../../NJMediator_NJTeachersHelerList'
 end
 
 def release_remote_pods

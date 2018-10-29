@@ -6,7 +6,7 @@
 //  Copyright © 2018年 hupeng. All rights reserved.
 //
 
-#ifndef NJOC2SwiftBridge.h
-#define NJOC2SwiftBridge.h
+#ifndef NJOC2SwiftBridge
+#define NJOC2SwiftBridge
 
 #endif /* NJOC2SwiftBridge_h_h */

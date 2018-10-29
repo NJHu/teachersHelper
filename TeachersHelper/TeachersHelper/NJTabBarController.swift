@@ -9,6 +9,7 @@
 import UIKit
 import NJKit
 import NJMediator
+import NJMediator_NJTeachersHelerList
 
 class NJTabBarController: UITabBarController {
     
@@ -34,34 +35,7 @@ extension NJTabBarController: UITabBarControllerDelegate {
 // MARK:- UITabBarDelegate
 extension NJTabBarController {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        //        super.tabBar(tabBar, didSelect: item)
-    }
-}
-
-
-// MARK: - 添加模块
-extension NJTabBarController {
-    private func addChildVcs() -> Void {
-        // 直播列表
-//        if let nav0 = NJMediator.sharedMediator.Mediator_DYLiveShow_MainController() {
-//            self.addChildViewController(nav0)
-//        }
-//        // 视频列表
-//        if let nav3 = NJMediator.sharedMediator.Mediator_NJSisVideoList_MainController() {
-//            self.addChildViewController(nav3)
-//        }
-//        // 常见问题答疑
-//        if let nav4 = NJMediator.sharedMediator.Mediator_NJFAQ_Controller() {
-//            self.addChildViewController(nav4)
-//        }
-//        // 个人偏好
-//        if let nav1 = NJMediator.sharedMediator.Mediator_DYTrends_MainController() {
-//            self.addChildViewController(nav1)
-//        }
-//        // NowShow列表
-//        if let nav2 = NJMediator.sharedMediator.Mediator_NJNowShow_MainController() {
-//            self.addChildViewController(nav2)
-//        }
+        
     }
 }
 
@@ -89,3 +63,12 @@ extension NJTabBarController {
     }
 }
 
+// MARK: - 添加模块
+extension NJTabBarController {
+    private func addChildVcs() -> Void {
+        // 课程列表
+        if let nav0 = NJMediator.sharedMediator.Mediator_NJTeachersHelerList_Controller() {
+            self.addChild(nav0)
+        }
+    }
+}
