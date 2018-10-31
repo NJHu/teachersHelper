@@ -17,20 +17,24 @@ end
 def develop_local_pods
     source 'https://github.com/NJHu/NJSpecs.git' # NJ 私有源
     
-    pod 'NJKit', :path => '../../NJKit'
-    pod 'NJMediator', :path => '../../NJMediator'
+    #pod 'NJKit', :path => '../../NJKit'
+    #pod 'NJMediator', :path => '../../NJMediator'
     
-    pod 'NJTeachersHelerList', :path => '../../NJTeachersHelerList'
-    pod 'NJMediator_NJTeachersHelerList', :path => '../../NJMediator_NJTeachersHelerList'
+    #pod 'NJTeachersHelerList', :path => '../../NJTeachersHelerList'
+    #pod 'NJMediator_NJTeachersHelerList', :path => '../../NJMediator_NJTeachersHelerList'
 end
 
 def release_remote_pods
     
     source 'https://github.com/NJHu/NJSpecs.git' # NJ 私有源
     # 基础组件
-    #pod 'NJKit'
+    pod 'NJKit'
     # 中间件
-    #pod 'NJMediator', :source => 'https://github.com/NJHu/NJSpecs.git'
+    pod 'NJMediator', :source => 'https://github.com/NJHu/NJSpecs.git'
+    
+    pod 'NJTeachersHelerList'
+    
+    pod 'NJMediator_NJTeachersHelerList'
 end
 
 platform :ios, '10.3'
