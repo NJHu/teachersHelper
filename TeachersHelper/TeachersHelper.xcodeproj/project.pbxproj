@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		581DB8262199486000044B4C /* TeachersHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TeachersHelper.entitlements; sourceTree = "<group>"; };
 		5842CFFC218451240085D642 /* TeachersHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeachersHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5842D006218451250085D642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5842D00B218451250085D642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		5842CFFE218451240085D642 /* TeachersHelper */ = {
 			isa = PBXGroup;
 			children = (
+				581DB8262199486000044B4C /* TeachersHelper.entitlements */,
 				5842D012218451970085D642 /* NJAppDelegate.swift */,
 				5842D013218451970085D642 /* NJConst.swift */,
 				5842D011218451970085D642 /* NJLanuchScreen.xib */,
@@ -125,6 +127,17 @@
 					5842CFFB218451240085D642 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -189,7 +202,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TeachersHelper/Pods-TeachersHelper-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TeachersHelper/Pods-TeachersHelper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -216,7 +229,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeachersHelper/Pods-TeachersHelper-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeachersHelper/Pods-TeachersHelper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -357,7 +370,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = TeachersHelper/TeachersHelper.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 44HDC9YG72;
 				INFOPLIST_FILE = TeachersHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -367,6 +381,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baocl.github.TeachersHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TeachersHelper_dev_provisfile;
 				SWIFT_OBJC_BRIDGING_HEADER = TeachersHelper/NJOC2SwiftBridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -380,7 +395,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = TeachersHelper/TeachersHelper.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 44HDC9YG72;
 				INFOPLIST_FILE = TeachersHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -390,6 +407,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baocl.github.TeachersHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "TeachersHelper_ Distribution_prosfile";
 				SWIFT_OBJC_BRIDGING_HEADER = TeachersHelper/NJOC2SwiftBridge.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
